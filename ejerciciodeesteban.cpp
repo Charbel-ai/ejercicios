@@ -9,7 +9,9 @@ int main(){
 float temperatura; 
 float medida; 
 float medida2; 
+char decision; 
 
+do{
 std::cout<<"------Convertidor de escalas------"<<std::endl;
 std::cout<<"Ingresa la temepratura que quieres convertir, solo los numeros"<<std::endl;
 std::cin>>temperatura;
@@ -22,7 +24,7 @@ if ((medida != 1) && (medida != 2)&&(medida != 3)){
 while((medida != 1) && (medida != 2)&&(medida != 3));
 
 do{
-std::cout<<"Ingresa la temperatura a la que la quieres convertir, segun los numeros que se les asignaron (4= Fahrenheit , 5= Celsius , 6= Kelvin )"<<std::endl;
+std::cout<<"Ingresa la temperatura a la que la quieres convertir, segun los numeros que se les asignaron (4= Fahrenheit , 5= Celsius , 6= Kelvin)"<<std::endl;
 std::cin>>medida2;
 if ((medida2 != 4) && (medida2 != 5)&&(medida2 != 6)){
     std::cout<<"Ingresa una medida de teperatura valida "<<std::endl;}
@@ -34,23 +36,40 @@ if((medida == 1)&&(medida2 == 5) ){
 std::cout<<"Tu temperatura de Fahrenheit, es igual a "<< 5 * (temperatura - 32) / 9<< " Celsius ";}
 
 else if ((medida == 1)&&(medida2 == 6)){
-std::cout<<"Tu temperatura de Fahrenheit, es igual a "<< 5 * (temperatura - 32) / 9 + 273.15 << " Celsius ";}
+std::cout<<"Tu temperatura de Fahrenheit, es igual a "<< 5 * (temperatura - 32) / 9 + 273.15 << " Kelvin ";}
 
 else if ((medida == 1)&&(medida2 == 4)){
 std::cout<<"Has escogido la misma temperatura, no has convertido tu temperatura, sigue siendo "<< temperatura << " Fahrenheit" << std::endl;}
 
 //Conversion de Celsius 
 if((medida == 2)&&(medida2 == 4) ){
-std::cout<<"Tu temperatura de Celsius, es igual a "<< 5 * (temperatura - 32) / 9<< " Celsius ";}
+std::cout<<"Tu temperatura de Celsius, es igual a "<<  9 * 400 / 5 + 32<< " Fahrenheit ";}
 
 else if ((medida == 2)&&(medida2 == 6)){
-std::cout<<"Tu temperatura de Fahrenheit, es igual a "<< 5 * (temperatura - 32) / 9 + 273.15 << " Celsius ";}
+std::cout<<"Tu temperatura de Celsius, es igual a "<< temperatura + 273.15 << " Kelvin ";}
 
 else if ((medida == 2)&&(medida2 == 5)){
-std::cout<<"Has escogido la misma temperatura, no has convertido tu temperatura, sigue siendo "<< temperatura << " Fahrenheit" << std::endl;}
+std::cout<<"Has escogido la misma temperatura, no has convertido tu temperatura, sigue siendo "<< temperatura << " Celsius" << std::endl;}
 
-   
-   
+//Conversion de Kelvin
+if((medida == 3)&&(medida2 == 4) ){
+std::cout<<"Tu temperatura de Kelvin, es igual a "<<  9 * (temperatura - 273.15) / 5 + 32<< " Fahrenheit ";}
+
+else if ((medida == 3)&&(medida2 == 5)){
+std::cout<<"Tu temperatura de Kelvin, es igual a "<< temperatura - 273.15 << " Celsius ";}
+
+else if ((medida == 3)&&(medida2 == 6)){
+std::cout<<"Has escogido la misma temperatura, no has convertido tu temperatura, sigue siendo "<< temperatura << " Celsius" << std::endl;}
+
+std::cout<<"Deseas hacer otra convercion ? S/N"<<std::endl;
+std::cin>>decision; 
+}
+while (decision == 'S');
+
+
+if (decision == 'N'){
+std::cout<<"Gracias, el programa ha finalizado "<<std::endl; 
+}
    
    
    
