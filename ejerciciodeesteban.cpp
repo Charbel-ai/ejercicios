@@ -6,6 +6,35 @@
 //correcta
 int main(){
 
+float temperatura; 
+float medida; 
+float medida2; 
+
+std::cout<<"------Convertidor de escalas------"<<std::endl;
+std::cout<<"Ingresa la temepratura que quieres convertir, solo los numeros"<<std::endl;
+std::cin>>temperatura;
+do{
+std::cout<<"Ingresa la temperatura original de tu medida (1= Fahrenheit , 2= Celsius , 3= Kelvin )"<<std::endl;
+std::cin>>medida;
+if ((medida != 1) && (medida != 2)&&(medida != 3)){
+    std::cout<<"Ingresa una medida de teperatura valida "<<std::endl;}
+}
+while((medida != 1) && (medida != 2)&&(medida != 3));
+
+do{
+std::cout<<"Ingresa la temperatura a la que la quieres convertir (4= Fahrenheit , 5= Celsius , 6= Kelvin )"<<std::endl;
+std::cin>>medida2;
+if ((medida2 != 4) && (medida2 != 5)&&(medida2 != 6)){
+    std::cout<<"Ingresa una medida de teperatura valida "<<std::endl;}
+}
+while((medida2 != 4) && (medida2 != 5)&&(medida2 != 6));
+
+//Operacion de convercion
+if((medida == 1)&&(medida2 == 5) ){
+
+std::cout<<"Tu temperatura de Fahrenheit, es igual a "<< 5 * (temperatura - 32) / 9<< " Celsius "; 
+
+}
 
 
 

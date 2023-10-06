@@ -13,12 +13,12 @@ std::cin>> totaldecompra;
 
 //Operacion por si el numero de productos es mayor a 5
 if (numerodeproductos > 5){
-int descuento = totaldecompra - totaldecompra * .10;
+int descuento = totaldecompra - totaldecompra * .10; 
 //int descuento2 = totaldecompra - descuento; 
 int totaldecompra2 = totaldecompra * .16;
 int preciototal = descuento + totaldecompra2; 
 
-std::cout<<"Compraste "<< numerodeproductos << "productos."<< "Con el descuento, el precio total es " << preciototal; 
+std::cout<<"Compraste " << numerodeproductos << " productos."<< "Con el descuento, el precio total es " << preciototal; 
 }
 
 else if ( numerodeproductos < 5){
