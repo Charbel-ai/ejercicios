@@ -29,14 +29,26 @@ if ((medida2 != 4) && (medida2 != 5)&&(medida2 != 6)){
 }
 while((medida2 != 4) && (medida2 != 5)&&(medida2 != 6));
 
-//Operacion de convercion
+//Operacion de convercion de Fahrenheit
 if((medida == 1)&&(medida2 == 5) ){
+std::cout<<"Tu temperatura de Fahrenheit, es igual a "<< 5 * (temperatura - 32) / 9<< " Celsius ";}
 
-std::cout<<"Tu temperatura de Fahrenheit, es igual a "<< 5 * (temperatura - 32) / 9<< " Celsius "; 
+else if ((medida == 1)&&(medida2 == 6)){
+std::cout<<"Tu temperatura de Fahrenheit, es igual a "<< 5 * (temperatura - 32) / 9 + 273.15 << " Celsius ";}
 
-}
+else if ((medida == 1)&&(medida2 == 4)){
+std::cout<<"Has escogido la misma temperatura, no has convertido tu temperatura, sigue siendo "<< temperatura << " Fahrenheit" << std::endl;}
+
+//Conversion de Celsius 
 
 
-
+   
+   
+   
+   
+   
+   
     return 0; 
+
 }
+
