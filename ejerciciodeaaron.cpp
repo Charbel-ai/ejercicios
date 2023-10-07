@@ -6,27 +6,40 @@
 //- Cuando haya un número divisible por 3 y 5, tiene que imprimir "café con 
 //leche", 5 y 10 "leche con hielos", 3 y 10 "café con hielos", y si son los tres 
 //debería imprimir "café con leche y hielos"
+
 int main() {
-    for (int a = 1; a <= 100; a++) {
-       
-    if ((a % 3 == 0)|| (a % 5 == 0) || (a % 10 == 0)) {
-        if (a % 3 == 0) {
-                std::cout << "café";}
-        if (a % 5 == 0) {
-            if (a % 3 == 0) {
-                std::cout << " con ";}
-            std::cout << "leche";}
-        if (a % 10 == 0) {
-            if ( (a % 3 == 0 )||(a % 5 == 0)) {
-            std::cout << " y ";}
-            std::cout << "hielos";
-            }
-        } else {
-            std::cout << a;
+    for (int a = 1; a <=100; a ++){
+        if ((a % 3 == 0)&&(a % 5 == 0 )&&(a % 10 == 0)){
+            std::cout<<"cafe con leche y hielos"<<std::endl;
+        }
+        else if ( (a % 3 == 0) && (a % 5 == 0) ){
+            std::cout<<"cafe con leche "<<std::endl;
+        }
+        else if ((a % 5 == 0) && (a % 10 == 0)){
+            std::cout<<"leche con hielos "<<std::endl;
+        }
+        else if ((a % 3 == 0) && (a % 10 == 0)){
+            std::cout<<"cafe con hielos "<<std::endl;
+        }
+        else if (a % 3 == 0){
+            std::cout<<"cafe"<<std::endl;
+
+        }
+        else if (a % 5 == 0){
+            std::cout<<"leche"<<std::endl;
+
+        }
+        else if (a % 10 == 0){
+            std::cout<<"hielos "<<std::endl;
+
+        }
+        else {
+            std::cout<<a<<std::endl; 
         }
 
-        std::cout << std::endl;
     }
 
-    return 0;
+
+    return 0; 
 }
+
